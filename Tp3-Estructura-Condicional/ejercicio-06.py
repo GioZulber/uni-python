@@ -8,16 +8,14 @@ Si recorre entre 0 y 10 km: $30 por km∑Si recorre 10 km o más: $20 por km
 
 km = int(input("Ingrese la cantidad de kilometros que desea recorrer: "))
 min = 250
-
-if km > 0 and km < 10 : 
-    if km * 30 < min : 
-        print('El precio final es:', min)
-    else:
-        print('El precio final es:', km * 30)
-elif km >= 10:
-    if km * 20 < min : 
-        print('El precio final es:', min)
-    else: 
-        print('El precio final es:', km * 20)
+price1= km * 30
+price2= km * 20
+if precio1 > min and precio2 > 250:
+    if km >= 0 and km < 10:
+        print('El precio es:', precio1)
+    elif km >= 10:
+        print('El precio es:', precio2)
+else:
+    print('El precio es:', min)
 else: 
     print('El número ingresado es invalido. Intente de nuevo.')
