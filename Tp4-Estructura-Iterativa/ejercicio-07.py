@@ -9,17 +9,15 @@ numMajor= 0
 # pos=0  
 
 counter = 1
-counterProm = 0
+acum = 0
 while counter < 10: 
+	counter +=1
 	num = int(input("Ingrese un número: "))
 	if(num > numMajor):
 		pos= counter
-		numMajor = num
-		counterProm =+ num 
-		counter +=1
-	else: 
-		counterProm =+ num 
-		counter +=1
+		numMajor = num 
+	acum =+ num 
 		
-prom = counterProm / 10
+		
+prom = acum / 10
 print("El promedio de los numeros ingresados es:", prom, "El mayor valor leido:", numMajor, "Este se encontraba en la posicion:", pos )

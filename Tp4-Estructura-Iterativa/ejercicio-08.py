@@ -5,11 +5,11 @@ Ingresar números, hasta que la suma de los números pares supere 100. Mostrar c
 num = int(input("Ingrese numeros menores a 100:"))
 
 counter = 0
-sum = 0
-while (sum < 100):
+acum = 0
+while (acum < 100):
 	num = int(input("Ingrese numeros menores a 100:"))
 	if num % 2 == 0: 
-		sum += num
+		acum += num
 		
 	counter += 1
 	
