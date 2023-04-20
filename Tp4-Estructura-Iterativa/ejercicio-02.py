@@ -9,8 +9,10 @@ while num != -1:
 	num = int(input("Ingrese  de numeros. Para finalizar ingrese -1. "))	
 	if ( isPair == False): 
 		isPair = True 
-		print("La cantidad de elementos ingresada es inpar")
-
 	else: 
 		isPair = False
-		print("La cantidad de elementos ingresada es par")
+
+if(isPair == False): 
+	print("La cantidad de elementos ingresada es impar")
+else: 
+	print("La cantidad de elementos ingresada es par")
