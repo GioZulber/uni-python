@@ -2,8 +2,6 @@
 Ingresar números, hasta que la suma de los números pares supere 100. Mostrar cuántos números se ingresaron en total.
 '''
 
-num = int(input("Ingrese numeros menores a 100:"))
-
 counter = 0
 acum = 0
 while (acum < 100):
