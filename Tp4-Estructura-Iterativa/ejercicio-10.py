@@ -9,7 +9,6 @@ counter = 1
 factorial = 1
 
 while num > 0 and counter <= num: 
-    print("factorial: ", factorial)
     factorial *= counter
     counter += 1
 print("----------------------------------------------------")
