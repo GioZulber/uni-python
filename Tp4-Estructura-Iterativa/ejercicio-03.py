@@ -11,6 +11,6 @@ if(numIn > 0) :
 				numMajor = numIn
 			elif(numIn < numMinor): 
 				numMinor = numIn
-			print("Numero mayor: ", numMajor, "Menor: ", numMinor)
 			numIn=int(input("Ingrese un conjunto de números: "))    
+		print("Numero mayor: ", numMajor, "Menor: ", numMinor)
 

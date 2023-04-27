@@ -6,24 +6,23 @@ Descartar valores que no representan una edad válida. (Se considera válida una
 
 num = int(input("Ingrese su edad y la de cada uno de sus amigos. Ingrese -1 para finalizar: "))
 
-counterMajors = 1
-counterMinors = 1
+counterMajors = 0
+counterMinors = 0
 majors = 0
 minors = 0
 
 while num != -1: 
 	if num < 100 and num > 0:
-		if(num > 18):
+		if(num >= 18):
 			majors += num		
 			counterMajors += 1	
 		else:
 			minors += num
 			counterMinors +=1
 	num = int(input("Ingrese su edad y la de cada uno de sus amigos. Ingrese -1 para finalizar: "))
-	print("Mayores", counterMajors, majors)
-	print("Menores", counterMinors, minors)
+
 promMajors	= majors / counterMajors
 promMinors = minors / counterMinors
 
-print("Mayores de 18 años:", counterMajors, "Promedio de edad:", promMajors, "\n",
-    "Menores de 18 años:", counterMajors, "Promedio de edad:", promMinors ) 
+print("Cantidad de mayores de 18 años:", counterMajors, "Promedio de edad:", promMajors, "\n",
+    "Cantidad de menores de 18 años:", counterMinors, "Promedio de edad:", promMinors ) 
