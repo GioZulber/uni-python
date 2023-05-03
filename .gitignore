@@ -1,5 +1,6 @@
-./data.json
-./index.js
-./readData.js
-./package.json
-./vscode
+.gitignore
+data.json
+index.js
+readData.js
+package.json
+.vscode
