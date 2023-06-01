@@ -28,8 +28,8 @@ def daysLeft(day, month, year):
 # daysIn = int(input("Ingrese el día: "))
 # monthIn = int(input("Ingrese el mes: "))
 # yearIn= int(input("Ingrese el año: "))
-daysIn = 3
-monthIn = 5
+daysIn = 1
+monthIn = 1
 yearIn = 2023
 
 totalDays = daysLeft(daysIn, monthIn, yearIn)
@@ -38,77 +38,97 @@ totalDays = daysLeft(daysIn, monthIn, yearIn)
 def daysLeftToEndYear(month, year, totalDays):
     month += 1
     while month <= 12:
-        totalDays += daysLeft(0, month, year)
+        totalDays = totalDays + daysLeft(1, month, year)
         month += 1
     # print("Faltan", totalDays, "días para fin de año.")
     return totalDays
 
 
-# daysLeftToEndYear(monthIn,yearIn, totalDays)
-def daysOntheYear(month, year, totalDays):
-    month += 1
-    while month <= 12:
-        totalDays += daysLeft(0, month, year)
-        month += 1
-    if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
-        totalDaysInTheYear = 366
-    else:
-        totalDaysInTheYear = 365
-    daysOfTheYear = totalDaysInTheYear - totalDays
-    # print("Total de dias transcurridos en el año contando hoy:", daysOfTheYear)
-    return daysOfTheYear
+print(daysLeftToEndYear(1, 2023, totalDays))
+# def daysOntheYear(month, year, totalDays):
+#     month += 1
+#     while month <= 12:
+#         totalDays += daysLeft(0, month, year)
+#         month += 1
+#     if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+#         totalDaysInTheYear = 366
+#     else:
+#         totalDaysInTheYear = 365
+#     daysOfTheYear = totalDaysInTheYear - totalDays
+#     # print("Total de dias transcurridos en el año contando hoy:", daysOfTheYear)
+#     return daysOfTheYear
 
 
-# daysOntheYear(monthIn, yearIn,totalDays)
+# # daysOntheYear(monthIn, yearIn,totalDays)
 
 
-# daysInTwo = int(input("Ingrese el día: "))
-# monthInTwo = int(input("Ingrese el mes: "))
-# yearInTwo= int(input("Ingrese el año: "))
+# # daysInTwo = int(input("Ingrese el día: "))
+# # monthInTwo = int(input("Ingrese el mes: "))
+# # yearInTwo= int(input("Ingrese el año: "))
 
-daysInTwo = 1
-monthInTwo = 5
-yearInTwo = 2024
-
-
-def datesDifference(day1, month1, year1, day2, month2, year2):
-    totalDaysDate1 = daysOntheYear(month1, year1, totalDays) + daysLeftToEndYear(
-        month1, year1, totalDays
-    )
-    totalDaysDate2 = daysOntheYear(month2, year2, totalDays) + daysLeftToEndYear(
-        month2, year2, totalDays
-    )
-    # if year1 == year2:
-    #     year = 0
-    #     if month1 == month2:
-    #         month = 0
-    #         if day1 < day2:
-    #             day = day2 - day1
-    #         elif day1 > day2:
-    #             day = day1 - day2
-    # if year1 < year2:
-    #     year = year2 - year1
-    #     day = day2 - day1
-    #     month = month1
-    #     print(year)
-
-    print(
-        "La diferencia entre las fechas",
-        day1,
-        "/",
-        month1,
-        "/",
-        year1,
-        "y",
-        day2,
-        "/",
-        month2,
-        "/",
-        year2,
-    )
-    print("Es de", day, "dias", month, "meses", "y", year, "años")
-    # print(day)
-    # elif(day1 > day2):
+# daysInTwo = 1
+# monthInTwo = 5
+# yearInTwo = 2024
 
 
-diff = datesDifference(daysIn, monthIn, yearIn, daysInTwo, monthInTwo, yearInTwo)
+# def datesDifference(day1, month1, year1, day2, month2, year2):
+#     if year1 == year2:
+#         year = 0
+#         if month1 == month2:
+#             month = 0
+#             if day1 < day2:
+#                 day = day2 - day1
+#             elif day1 > day2:
+#                 day = day1 - day2
+#     if year1 < year2:
+#         year = year2 - year1
+#         totalDaysDate1 = daysOntheYear(month1, year1, totalDays)
+#         totalDaysDate2 = daysLeftToEndYear(month2, year2, totalDays)
+#         if totalDaysDate1 > totalDaysDate2:
+#             print("hola estoy aca")
+#             daysDate = totalDaysDate1 - totalDaysDate2
+#             month = daysDate / 12
+#             print(month)
+#             day = daysDate // daysLeft(daysDate, month, year)
+
+#             print(day, month, year)
+#         elif totalDaysDate1 < totalDaysDate2:
+#             daysDate = totalDaysDate2 - totalDaysDate1
+#             if month1 == month2:
+#                 month = 11
+#             day = daysDate // daysLeft(daysDate, month, year)
+#             if day < 0:
+#                 day *= -1
+
+#             print(day, month, year)
+
+#     """
+#         totalDaysDate1 = daysOntheYear(month1, year1, totalDays)
+#         totalDaysDate2 = daysLeftToEndYear(month2, year2, totalDays)
+
+#         daysDate1 = totalDaysDate2 - totalDaysDate1
+#         day = daysDate1 // daysLeft(daysDate1, 5, 2024)
+#         print(daysDate1)
+#         print(day)
+#     """
+
+#     print(
+#         "La diferencia entre las fechas",
+#         day1,
+#         "/",
+#         month1,
+#         "/",
+#         year1,
+#         "y",
+#         day2,
+#         "/",
+#         month2,
+#         "/",
+#         year2,
+#     )
+#     # print("Es de", day, "dias", month, "meses", "y", year, "años")
+#     # print(day)
+#     # elif(day1 > day2):
+
+
+# diff = datesDifference(daysIn, monthIn, yearIn, daysInTwo, monthInTwo, yearInTwo)
