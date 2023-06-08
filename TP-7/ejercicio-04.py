@@ -1,8 +1,7 @@
 """
-Ejercicio 3:
-Determinar si la lista es capicúa (palíndromo).
-Una lista capicúa se lee de igual modo de izquierda a derecha y de derecha a izquierda. 
-Por ejemplo, [2, 7, 7, 2] es capicúa, mientras que [2, 7, 5, 2] no lo es.
+Ejercicio 4:
+Escribir una función para contar cuántas veces aparece un valor dentro de la lista. 
+La función recibe como parámetros la lista y el valor a buscar, y devuelve un número entero.
 """
 
 
@@ -31,17 +30,12 @@ def save_in_list(A, B):
 list = save_in_list(1, 50)
 
 
-def es_capicua(lista):
-    reversed = []
-    for i in range(len(lista)):
-        reversed.append(lista[len(lista) - i - 1])
-    if lista == reversed:
-        return True
-    else:
-        return False
+def count(list, value):
+    count = 0
+    for i in list:
+        if i == value:
+            count += 1
+    return count
 
 
-if es_capicua(list):
-    print("La lista es capicúa.")
-else:
-    print("La lista no es capicúa.")
+print(count(list, 2))

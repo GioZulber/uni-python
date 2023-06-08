@@ -9,9 +9,7 @@ a = 10 # VARIABLE GLOBAL
 
 def sumarDos(a):
     b = 2 # VARIABLE LOCAL
-    print("Hola soy Lucasbra y tengo el pito re chico como luca negro sucio") # Soy Ian 
     return a + b
 
-# print(b) # error -> 'b' is not defined
-
-print(sumarDos(a))
+# Si hacemos print(b) nos da error -> 'b' is not defined, porque b es una variable local de la funcion sumarDos y no podemos acceder a ella desde afuera de la funcion.
+print(sumarDos(a)) # Ejecutamos la funcion sumarDos y le pasamos como parametro la variable global a, que vale 10.

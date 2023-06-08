@@ -1,8 +1,8 @@
 """
-Ejercicio 3:
-Determinar si la lista es capicúa (palíndromo).
-Una lista capicúa se lee de igual modo de izquierda a derecha y de derecha a izquierda. 
-Por ejemplo, [2, 7, 7, 2] es capicúa, mientras que [2, 7, 5, 2] no lo es.
+Ejercicio 5:
+Desarrollar una función que reciba la lista como parámetro 
+y devuelva una nueva lista con los mismos elementos de la primera, pero en orden inverso. 
+Por ejemplo, si la función recibe [5, 7, 1] debe devolver [1, 7, 5].
 """
 
 
@@ -31,17 +31,14 @@ def save_in_list(A, B):
 list = save_in_list(1, 50)
 
 
-def es_capicua(lista):
+def reverse_list(list):
     reversed = []
-    for i in range(len(lista)):
-        reversed.append(lista[len(lista) - i - 1])
-    if lista == reversed:
-        return True
-    else:
-        return False
+    for i in range(len(list)):
+        reversed.append(list[len(list) - i - 1])
+    return reversed
 
 
-if es_capicua(list):
-    print("La lista es capicúa.")
-else:
-    print("La lista no es capicúa.")
+reversed = reverse_list(list)
+
+print("La lista original es:", list)
+print("La lista invertida es:", reversed)

@@ -7,8 +7,13 @@ y devuelve la lista cargada (o vacía, si el usuario no ingresó nada) como valo
 """
 
 
-def save_in_list(num, A, B):
+def save_in_list(A, B):
     array = []
+    aux = 0
+    if A > B:
+        aux = A
+        A = B
+        B = aux
 
     while num != -1:
         if num >= A and num <= B:
@@ -22,6 +27,4 @@ def save_in_list(num, A, B):
     return array
 
 
-num = int(input("Ingrese un numero: "))
-
-print(save_in_list(num, 1, 50))
+print(save_in_list(10, 50))

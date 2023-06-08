@@ -1,7 +1,7 @@
 """
-Ejercicio 2:
-
-Calcular la suma de los números de la lista.
+Ejercicio 6:
+Escribir una función para devolver una lista con todas las posiciones que ocupa un valor pasado como parámetro, utilizando búsqueda secuencial en una lista desordenada. 
+La función debe devolver una lista vacía si el elemento no se encuentra en la lista original.
 """
 
 
@@ -27,11 +27,14 @@ def save_in_list(A, B):
     return array
 
 
+def search(list, value):
+    positions = []
+    for i in range(len(list)):
+        if list[i] == value:
+            positions.append(i)
+    return positions
+
+
 list = save_in_list(1, 50)
 
-list_sum = 0
-
-for i in list:
-    list_sum += i
-
-print("La suma total de los elementos de la lista es:", list_sum)
+print(search(list, 5))
