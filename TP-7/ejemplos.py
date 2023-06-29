@@ -11,6 +11,27 @@ def changeMethod(array):
     return array
 print(changeMethod([9,6,32,4,1,3,7,8]))
 
+# 2do parcial
+"""
+def searchedNumbers(values):
+    for i in range(len(values) - 1):
+        values[i] = negative(values[i]) 
+        # al valor de values se le resta 1 para que no se salga del rango y se le resta i para que no compare los valores que ya estan ordenados
+        for j in range(len(values) -1 -i):
+            # se compara la suma del digito de la izquierda con la suma del digito de la derecha    
+            if digitSum(values[j]) > digitSum(values[j + 1]):
+                aux = values[j]
+                values[j] =  values[j + 1]
+                values[j + 1] = aux
+            elif digitSum(values[j]) == digitSum(values[j + 1]):
+                if values[j] > values[j + 1]:
+                    aux = values[j]
+                    values[j] = values[j + 1]
+                    values[j + 1] = aux
+    return values    
+"""
+
+"""
 def InsertMethod(array):
     for i in range(1, len(array)):
         aux = array[i]
@@ -53,3 +74,5 @@ changeMethod(listaLegajos,listaNotas)
 print()
 for i in range(len(listaLegajos)):
     print(listaLegajos[i], ":", listaNotas[i], sep="")
+
+"""
