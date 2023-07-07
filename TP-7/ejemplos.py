@@ -1,3 +1,5 @@
+
+ 
 def changeMethod(array):
     disorder = True
     while disorder:
@@ -9,7 +11,7 @@ def changeMethod(array):
                 array[i + 1] = aux
                 disorder = True
     return array
-print(changeMethod([9,6,32,4,1,3,7,8]))
+# print(changeMethod([9,6,32,4,1,3,7,8]))
 
 # 2do parcial
 """
@@ -31,7 +33,9 @@ def searchedNumbers(values):
     return values    
 """
 
-"""
+
+
+
 def InsertMethod(array):
     for i in range(1, len(array)):
         aux = array[i]
@@ -42,7 +46,7 @@ def InsertMethod(array):
         array[j ] = aux
     return array
 
-print(InsertMethod([9,6,32,4,1,3,7,8]))
+# print(InsertMethod([9,6,32,4,1,3,7,8]))
 
 def changeMethod(legajos, notas):
     disorder = True
@@ -75,4 +79,3 @@ print()
 for i in range(len(listaLegajos)):
     print(listaLegajos[i], ":", listaNotas[i], sep="")
 
-"""
